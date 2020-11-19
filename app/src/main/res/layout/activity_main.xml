@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#E13676C5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:text="Tasks list">
+
+    </TextView>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:weightSum="4"
+       android:layout_height="wrap_content">
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:hint="Add new task:"
+           android:id="@+id/newTaskText"
+           android:textColor="@android:color/black"
+           android:textSize="18sp"
+
+           />
+       <Button
+           android:id="@+id/taskAddBtn"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Add"
+           android:textAllCaps="false"
+           android:textColor="@android:color/black"
+           android:onClick="addItem"
+           android:layout_weight="3"/>
+   </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        >
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/getSpeechId"
+            android:onClick="getSpeech"
+            android:src="@drawable/ic_baseline_mic"
+
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerViewId"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
