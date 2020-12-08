@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         addbtn = findViewById(R.id.taskAddBtn);
         recyclerView = findViewById(R.id.recyclerViewId);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         DatabaseHandler db = new DatabaseHandler(this);
         List<ToDoModel> tasklist = db.getAllToDoTasks();
 
