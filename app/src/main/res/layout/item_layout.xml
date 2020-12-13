@@ -12,27 +12,23 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:padding="8dp"
-        android:layout_height="wrap_content">
+        android:layout_height="60dp">
         <TextView
             android:fontFamily="@font/bones_font"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="test"
-            android:textSize="16sp"
+            android:layout_height="50dp"
+            android:textSize="18sp"
             android:textColor="@android:color/holo_green_dark"
             android:textStyle="normal"
-            android:textFontWeight="500"
-            android:layout_weight="4"
-            android:layout_marginRight="50dp"
+            android:layout_marginEnd="50dp"
             android:id="@+id/itemTextId">
         </TextView>
 
         <ImageButton
             android:layout_alignParentEnd="true"
             android:id="@+id/taskRemoveBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:onClick="removeItem"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_baseline_delete"

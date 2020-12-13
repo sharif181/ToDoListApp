@@ -10,14 +10,15 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="5dp"
         android:fontFamily="@font/crack"
-        android:layout_marginLeft="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="35sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
-        android:text="Tasks list">
+        android:text="@string/headline">
 
     </TextView>
 
@@ -30,7 +31,7 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:layout_weight="1"
-           android:hint="Add new task:"
+           android:hint="@string/addTaskHint"
            android:id="@+id/newTaskText"
            android:textColor="@android:color/black"
            android:textSize="18sp"
@@ -40,9 +41,10 @@
            android:id="@+id/taskAddBtn"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:text="Add"
+           android:text="@string/buttonText"
            android:background="@drawable/custom_add_button"
            android:textAllCaps="false"
+           android:textSize="20sp"
            android:textColor="@android:color/black"
            android:onClick="addItem"
            android:layout_weight="3"/>

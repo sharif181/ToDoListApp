@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DoList</string>
+    <string name="addTaskHint">Add new task:</string>
+    <string name="headline">Tasks list</string>
+    <string name="buttonText">Add</string>
+
 </resources>

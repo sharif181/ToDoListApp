@@ -26,14 +26,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
     }
 
-    //creating table
     @Override
     public void onCreate(SQLiteDatabase db){
         String CREATE_TODO_TABLE = "CREATE TABLE "+ TABLE_NAME + "(" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+TASK + " TEXT"+")";
         db.execSQL(CREATE_TODO_TABLE);
     }
 
-    //updating table
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
@@ -44,7 +42,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(TASK,toDoModel.getTask());
-
         db.insert(TABLE_NAME,null,cv);
         db.close();
     }
@@ -72,7 +69,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(TASK,toDoModel.getTask());
 
-        // updating row
         return db.update(TABLE_NAME, values, ID + " = ?",
                 new String[] { String.valueOf(toDoModel.getId()) });
     }
